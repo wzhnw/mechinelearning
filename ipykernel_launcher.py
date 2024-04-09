@@ -24,8 +24,10 @@ with st.sidebar:
 # If button is pressed
 if submit_button:
     # Load the saved model from the file
-    with open('https://github.com/wzhnw/mechinelearning/blob/main/rsf.pkl', 'rb') as f:
-        clf = pickle.load(f)
+    import requests 
+    # GitHub仓库中.pkl文件的原始文件URL 
+    url = 'https://github.com/wzhnw/mechinelearning/blob/main/rsf.pkl' 
+    clf = requests.get(url)
     
     # Store inputs into dataframe
     X = pd.DataFrame([[Perirenal_Fat_Invasion, Preoperative_tumor_rupture, 
