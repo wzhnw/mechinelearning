@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import joblib
+import pickle
 import os
 # Set page title and icon
 st.set_page_config(page_title="RSF Prediction App", page_icon=":bar_chart:")
@@ -28,7 +28,7 @@ if submit_button:
     
     # Load the saved model from the file
     with open(pickle_file_path, 'rb') as f:
-        clf = joblib.load(f)
+        clf = pickle.load(f)
     
     # Store inputs into dataframe
     X = pd.DataFrame([[Perirenal_Fat_Invasion, Preoperative_tumor_rupture, 
