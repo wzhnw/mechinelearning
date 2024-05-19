@@ -21,17 +21,12 @@ with st.sidebar:
     Radiotherapy = st.checkbox("Radiotherapy")
     submit_button = st.button("Submit")
 
-try:
-    with open('/mount/src/mechinelearning/your_pickle_file.pkl', 'rb') as f:
-        clf = pickle.load(f)
-except Exception as e:
-    print("An error occurred while loading the pickle file:", e)
 # If button is pressed
 if submit_button:
     # Load the saved model from the file
     
     # Load the saved model from the file
-    with open('/mount/src/mechinelearning/rsf.pkl', 'rb') as f:
+    with open('./rsf.pkl', 'rb') as f:
         clf = pickle.load(f)
 
     
