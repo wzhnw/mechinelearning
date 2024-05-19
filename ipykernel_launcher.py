@@ -27,7 +27,7 @@ if submit_button:
     pickle_file_path = os.path.abspath('rsf.pkl')
     
     # Load the saved model from the file
-    with open(pickle_file_path, 'rb') as f
+    with open(pickle_file_path, 'rb') as f:
         clf = pickle.load(f)
     
     # Store inputs into dataframe
