@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import pickle
-import os
 # Set page title and icon
 st.set_page_config(page_title="RSF Prediction App", page_icon=":bar_chart:")
 
@@ -24,10 +23,9 @@ with st.sidebar:
 # If button is pressed
 if submit_button:
     # Load the saved model from the file
-    pickle_file_path = os.path.abspath('rsf.pkl')
     
     # Load the saved model from the file
-    with open(pickle_file_path, 'rb') as f:
+    with open('./rsf.pkl', 'rb') as f:
         clf = pickle.load(f)
     
     # Store inputs into dataframe
