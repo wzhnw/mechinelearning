@@ -24,9 +24,9 @@ with st.sidebar:
 # If button is pressed
 if submit_button:
     # Load the saved model from the file
-    file_path = os.path.join(os.path.dirname(__file__), 'rsf.pkl')
+    
     # Load the saved model from the file
-    with open(file_path, 'rb') as f:
+    with open('/mount/src/mechinelearning/rsf.pkl', 'rb') as f:
         clf = pickle.load(f)
     
     # Store inputs into dataframe
