@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import pickle
+import scikit-survival
 
 # Set page title and icon
 st.set_page_config(page_title="RSF Prediction App", page_icon=":bar_chart:")
